@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sony.myapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today&apos;s date"
+        android:id="@+id/today"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bottles of beers drunk"
+        android:id="@+id/nameBeer"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/today"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glasses of whisky"
+        android:id="@+id/nameWhisky"
+        android:layout_below="@+id/nameBeer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="62dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glasses of wine"
+        android:id="@+id/nameWine"
+        android:layout_below="@+id/nameWhisky"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="59dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glasses of vodka"
+        android:id="@+id/nameVodka"
+        android:layout_below="@+id/nameWine"
+        android:layout_alignRight="@+id/nameWhisky"
+        android:layout_alignEnd="@+id/nameWhisky"
+        android:layout_marginTop="55dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/saveButton"
+        android:layout_below="@+id/nbVodka"
+        android:layout_toRightOf="@+id/nameWine"
+        android:layout_toEndOf="@+id/nameWine"
+        android:isScrollContainer="false"
+        android:onClick="saveButtonClicked" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nbBeer"
+        android:layout_alignTop="@+id/nameBeer"
+        android:numeric="integer"
+        android:gravity="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nbWhisky"
+        android:layout_alignTop="@+id/nameWhisky"
+        android:layout_alignRight="@+id/nbBeer"
+        android:layout_alignEnd="@+id/nbBeer"
+        android:gravity="center"
+        android:numeric="integer" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nbWine"
+        android:numeric="integer"
+        android:gravity="center"
+        android:layout_alignTop="@+id/nameWine"
+        android:layout_alignLeft="@+id/nameVodka"
+        android:layout_alignStart="@+id/nameVodka" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/nbVodka"
+        android:layout_alignTop="@+id/nameVodka"
+        android:layout_alignLeft="@+id/nbWine"
+        android:layout_alignStart="@+id/nbWine"
+        android:gravity="center"
+        android:numeric="integer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date_view_set"
+        android:id="@+id/dateView"
+        android:layout_alignTop="@+id/today"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/nbBeer"
+        android:layout_toRightOf="@+id/saveButton"
+        android:layout_toEndOf="@+id/saveButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set the date"
+        android:id="@+id/button"
+        android:layout_below="@+id/nameBeer"
+        android:layout_alignRight="@+id/dateView"
+        android:layout_alignEnd="@+id/dateView"
+        android:onClick="setDate"
+        android:width="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"
+        android:width="100dp"
+        android:layout_alignTop="@+id/nbWhisky"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
